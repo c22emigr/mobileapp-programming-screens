@@ -1,9 +1,32 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+Det första steget var att lägga till en ny actitivty vilket jag gjorde genom att skapa en ny "empty activity". Detta gjorde jag 
+eftersom att vi med en knapp ska kunna komma till den nya aktiviteten.
+För att få knappen att fungera så ska den ha en intent vilket innebär att vi lägger till en funktion så att knappen tar oss till MainActivity2.
+När vi kommer till vår nya aktivitet så skickas även en string och en int med som sedan displayas på den nya aktiviteten.
+För att stringen och vår integer ska visas så 
 
-_Du kan ta bort all text som finns sedan tidigare_.
+        private Intent knopp;
+        private Button button1;
+        public void onClick(View v) {
+        startActivity(new Intent (MainActivity.this, MainActivity2.class));
+        knopp = new Intent(MainActivity.this, MainActivity2.class);
+        knopp.putExtra("name", "Emil"); // Optional
+        knopp.putExtra("number", 99); // Optional
+        startActivity(knopp);
+        }
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            Name = extras.getString("name");
+            Number = extras.getInt("number");
+            textview = findViewById(R.id.textView1);
+            textview.setText(Name+Number);
+        }
+
+
+
 
 ## Följande grundsyn gäller dugga-svar:
 
