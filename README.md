@@ -5,7 +5,6 @@ Det första steget var att lägga till en ny actitivty vilket jag gjorde genom a
 eftersom att vi med en knapp ska kunna komma till den nya aktiviteten.
 För att få knappen att fungera så ska den ha en intent vilket innebär att vi lägger till en funktion så att knappen tar oss till MainActivity2.
 När vi kommer till vår nya aktivitet så skickas även en string och en int med som sedan displayas på den nya aktiviteten.
-För att stringen och vår integer ska visas så 
 
         private Intent knopp;
         private Button button1;
@@ -17,13 +16,18 @@ För att stringen och vår integer ska visas så
         startActivity(knopp);
         }
 
+För att stringen och vår integer ska visas så måste vi säga åt programmet att det är just stringen name och integern number som ska visas i vår 
+textview
+
+
         Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            Name = extras.getString("name");
-            Number = extras.getInt("number");
-            textview = findViewById(R.id.textView1);
-            textview.setText(Name+Number);
-        }
+                if (extras != null){
+                    Name = extras.getString("name");
+                    Number = extras.getInt("number");
+                    textview = findViewById(R.id.textView1);
+                    textview.setText(Name+Number);
+                }
+
 
 
 
