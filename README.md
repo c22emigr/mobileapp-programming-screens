@@ -16,8 +16,10 @@ När vi kommer till vår nya aktivitet så skickas även en string och en int me
         startActivity(knopp);
         }
 
-För att stringen och vår integer ska visas så måste vi säga åt programmet att det är just stringen name och integern number som ska visas i vår 
-textview
+![img.png](img.png)
+
+För att stringen och vår integer ska visas så måste vi säga åt programmet att det är just stringen name och integern number
+som ska visas i vår textview på andra activityn. Som vi ser så visas texten och numret från vår string och vår integer i textvyn.
 
 
         Bundle extras = getIntent().getExtras();
@@ -28,7 +30,7 @@ textview
                     textview.setText(Name+Number);
                 }
 
-
+![img_1.png](img_1.png)
 
 
 
